@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs"
 
-export default function Home() {
+const RootPage = () => {
   return (
    <div className="p-3"> 
-      <p> Admin dashboard </p>
-
-      <Button>Click Me</Button>
+      <UserButton afterSignOutUrl="/" />
+      <p> Admin dashboard. This is a protected page</p>
    </div>
    
   )
 }
+
+export default RootPage
