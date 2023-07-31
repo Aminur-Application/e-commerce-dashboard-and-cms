@@ -15,12 +15,7 @@ const RootPage = () => {
     }
   }, [onOpen, isOpen])
   
-  return (
-   <div className="p-3"> 
-      <p> Admin dashboard. This is a protected page</p>
-   </div>
-   
-  )
+  return null
 }
 
 export default RootPage
