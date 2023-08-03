@@ -33,6 +33,7 @@ const SettingsForm: React.FC<SettingsFormProps> = ({
 }) => {
   const params = useParams()
   const router = useRouter()
+  const origin = useOrigin()
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const form = useForm<SettingsFormValues>({
@@ -110,7 +111,7 @@ const SettingsForm: React.FC<SettingsFormProps> = ({
       <ApiAlert 
         title="NEXT_PUBLIC_API_URL" 
         variant="public" 
-        description={`${useOrigin()}/api/${params.storeId}`}
+        description={`${origin}/api/${params.storeId}`}
       />
     </>
   )

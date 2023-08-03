@@ -1,3 +1,5 @@
+"use client"
+
 interface ApiAlertProps {
   title: string;
   description: string;
