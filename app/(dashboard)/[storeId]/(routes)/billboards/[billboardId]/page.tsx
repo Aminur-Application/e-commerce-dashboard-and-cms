@@ -1,6 +1,6 @@
 import primsadb from "@/lib/prismadb";
 import React from "react";
-import BillboardForm from "./components/billboard-form";
+import BillboardForm from "./components/billboardForm";
 
 const BillboardPage = async ({
   params,
