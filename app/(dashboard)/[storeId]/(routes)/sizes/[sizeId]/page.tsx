@@ -1,6 +1,6 @@
 import primsadb from "@/lib/prismadb";
 import React from "react";
-import SizeForm from "./components/billboardForm";
+import SizeForm from "./components/sizeForm";
 
 const SizePage = async ({
   params,
