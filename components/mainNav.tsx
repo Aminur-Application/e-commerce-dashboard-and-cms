@@ -1,11 +1,14 @@
 "use client";
 
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
-import React from 'react'
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
+import React from "react";
 
-const mainNav = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
+const mainNav = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLElement>) => {
   const pathname = usePathname();
   const params = useParams();
   const routes = [
@@ -18,6 +21,11 @@ const mainNav = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => 
       href: `/${params.storeId}/billboards`,
       label: "Billboards",
       active: pathname === `/${params.storeId}/billboards`,
+    },
+    {
+      href: `/${params.storeId}/categories`,
+      label: "Categories",
+      active: pathname === `/${params.storeId}/categories`,
     },
     {
       href: `/${params.storeId}/sizes`,
@@ -35,11 +43,6 @@ const mainNav = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => 
       active: pathname === `/${params.storeId}/products`,
     },
     {
-      href: `/${params.storeId}/categories`,
-      label: "Categories",
-      active: pathname === `/${params.storeId}/categories`,
-    },
-    {
       href: `/${params.storeId}/settings`,
       label: "Settings",
       active: pathname === `/${params.storeId}/settings`,
@@ -55,15 +58,17 @@ const mainNav = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => 
           key={route.href}
           href={route.href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-primary',
-            route.active ? 'text-black dark:text-white' : 'text-muted-foreground'
+            "text-sm font-medium transition-colors hover:text-primary",
+            route.active
+              ? "text-black dark:text-white"
+              : "text-muted-foreground"
           )}
         >
           {route.label}
         </Link>
       ))}
     </nav>
-  )
-}
+  );
+};
 
-export default mainNav
+export default mainNav;
