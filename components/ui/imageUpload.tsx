@@ -13,7 +13,7 @@ import { Button } from "./button";
 import Image from "next/image";
 import { CldUploadWidget } from "next-cloudinary";
 
-const imageUpload: React.FC<ImageUploadProps> = ({
+const ImageUpload: React.FC<ImageUploadProps> = ({
   disabled,
   onChange,
   onRemove,
@@ -78,4 +78,4 @@ const imageUpload: React.FC<ImageUploadProps> = ({
   );
 };
 
-export default imageUpload;
+export default ImageUpload;

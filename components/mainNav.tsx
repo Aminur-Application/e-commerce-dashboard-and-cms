@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import React from "react";
 
-const mainNav = ({
+const MainNav = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
@@ -76,4 +76,4 @@ const mainNav = ({
   );
 };
 
-export default mainNav;
+export default MainNav;

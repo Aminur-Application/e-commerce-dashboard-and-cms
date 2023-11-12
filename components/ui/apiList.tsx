@@ -8,7 +8,7 @@ interface ApiListProps {
   entityIdName: string;
 }
 
-const apiList: React.FC<ApiListProps> = ({ entityIdName, entityName }) => {
+const ApiList: React.FC<ApiListProps> = ({ entityIdName, entityName }) => {
   const params = useParams();
   const origin = useOrigin();
 
@@ -44,4 +44,4 @@ const apiList: React.FC<ApiListProps> = ({ entityIdName, entityName }) => {
   );
 };
 
-export default apiList;
+export default ApiList;
